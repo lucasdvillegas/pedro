@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro, Pedro, Pedro ♫</title>
+    <!-- my old friend -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .rotate {
+        animation: rotate 6s linear infinite;
+      }
+
+      .bounce {
+        animation: bounce 0.2s linear infinite alternate;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(-5%);
+        }
+
+        to {
+          transform: translateY(10%);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-stone-950 h-dvh flex flex-col items-center justify-center">
+    <div class="bg-pink-200 rounded-full h-56 w-56 overflow-hidden">
+      <div class="rotate">
+        <img
+          src="./assests/pedro.png"
+          alt="El amiguito Pedro tirando sus prohibidos"
+          width="200px"
+          class="bounce w-full block aspect-square"
+        />
+      </div>
+    </div>
+    <audio autoplay loop controls class="mt-12 mx-auto">
+      <source src="./assests/pedrosong.mp3" type="audio/mp3" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </body>
+</html>
